@@ -24,7 +24,7 @@
 - for future reference when tables are made - do:
   > python manage.py makemigrations\
   > python manage.py migrate
-- fill in other empty variables in settings.py, including secret key 
+- fill in other empty variables in settings.py, including secret key (search how to generate django secret key)
 
 ## To run the project
 - cd into crm directory
