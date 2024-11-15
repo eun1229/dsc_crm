@@ -12,10 +12,12 @@
 - cd into directory
 - install venv module if not installed yet (it's most likely installed)
   > $ sudo apt install python3-venv
-- create and enter a new virtual environment 
+- create a new virtual environment
   > $ python3 -m venv venv (can name it whatever you want, I named mine venv)\
+- activate environment - make sure you do this every time you want to run the server
   > $ source venv/bin/activate (enter the new environment)\
   > $ pip install -r requirements.txt\
+  > if windows: cd myproject\venv\Scripts then .\activate
 
 ## Create Database and configure /crm/crm/settings.py
 - create database - I named mine crm
