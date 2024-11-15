@@ -13,7 +13,7 @@
 - install venv module if not installed yet (it's most likely installed)
   > $ sudo apt install python3-venv
 - create a new virtual environment
-  > $ python3 -m venv venv (can name it whatever you want, I named mine venv)\
+  > $ python3 -m venv venv (can name it whatever you want, I named mine venv)
 - activate environment - make sure you do this every time you want to run the server
   > $ source venv/bin/activate (enter the new environment)\
   > $ pip install -r requirements.txt\
