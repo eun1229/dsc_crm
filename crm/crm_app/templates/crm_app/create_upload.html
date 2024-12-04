@@ -1,0 +1,19 @@
+{% extends 'crm_app/base.html' %}
+{% block content %}
+
+<div class="col-md-6 offset-md-3 logged-in-content">
+
+  <h1>Upload CSV File</h1>
+  <p>Add patients to your database by uploading a CSV file. CSV files must follow the exact schema of the database.</p>
+  <br/>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+  <input type="file" name="sent_file" style="color:#202033;"/>
+  <input type="submit" name="submit" value="Upload" class="file-submit-button"/>
+  </form>
+  
+
+</div>
+
+{% endblock %}

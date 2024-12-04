@@ -1,0 +1,28 @@
+{% extends 'crm_app/base.html' %}
+{% block content %}
+<div class="col-md-6 offset-md-3 logged-in-content">
+
+  <h1>Add a Patient</h1>
+  <br/>
+  
+  <form method="POST" action="{% url 'add_patient' %}" class="patient-form">
+    {% csrf_token %}
+
+    {% for field in form %}
+      <div class="fieldWrapper" id="{{'patient_'|add:field.name}}">
+        <div>
+            {{ field.label_tag }}
+            {{ field }}
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-secondary" id = "add-patient-button">Add Patient</button>
+     <a href="{% url 'index' %}" class="btn btn-secondary" id="back-patient-button">Back</a>
+  
+  </form>
+
+</div>
+
+{% endblock %}
