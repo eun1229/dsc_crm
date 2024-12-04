@@ -1,6 +1,37 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'index' %}">CRM</a>
+{% if user.is_authenticated %}
+<div class="sidebar" style="width:15%">
+  <a class="navbar-brand nb-brand" href="{% url 'index' %}">Love for STL CRM</a>
+  <div class="nav-item w3-dropdown-hover">
+    <a class="nav-link btn"
+      >
+      <span class="material-icons">
+        add
+        </span>Add</a>
+        <div class="w3-dropdown-content">
+          <a href="{% url 'add_patient' %}" class="w3-bar-item w3-button">New Patient</a>
+          <a href="{% url 'create_upload' %}" class="w3-bar-item w3-button">Import Records</a>
+        </div> 
+  </div>
+    <a class="nav-link btn nav-icon" href="{% url 'view_patients' %}"
+      ><span class="material-icons">
+        perm_identity
+      </span>Contacts</a>
+    <a class="nav-link btn nav-icon" href="{% url 'index' %}"
+      ><span class="material-icons-outlined">
+        cottage
+      </span>Workspace</a>
+  <div style="margin-top: auto;">
+    <div class="nav-item">
+      <a class="nav-link btn logout-btn" href="{% url 'logout' %}"
+        >Logout</a
+      >
+    </div>
+  </div>
+</div>
+{% else %}
+<nav class="navbar fixed-top navbar-expand-lg">
+  <div class="container-fluid navbar-container">
+    <a class="navbar-brand" href="{% url 'view_patients' %}">Love for STL CRM</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -14,12 +45,39 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% if user.is_authenticated %}
         <li class="nav-item">
-          <a class="nav-link btn btn-primary" href="{% url 'register' %}"
+          <span class="material-symbols-outlined">
+            add
+          </span>
+          <a class="nav-link btn" href="{% url 'add_patient' %}"
+            >Add</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn" href="{% url 'logout' %}"
+            >Logout</a
+          >
+        </li>
+        {% else %}
+        <li class="nav-item-out">
+          <a class="nav-link btn" href="{% url 'register' %}"
             >Register</a
           >
         </li>
+        <li class="nav-item-out">
+          <a class="nav-link btn" href="{% url 'register' %}"
+            >About Us</a
+          >
+        </li>
+        <li class="nav-item-out">
+          <a class="nav-link btn" href="{% url 'register' %}"
+            >Contact</a
+          >
+        </li>
+        {% endif %}
       </ul>
     </div>
   </div>
 </nav>
+{% endif %}

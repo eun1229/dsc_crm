@@ -1,0 +1,534 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Julius Sans One", "Jost", sans-serif;
+}
+
+input {
+  border: 1px solid rgb(233, 233, 233)!important;
+}
+
+input:focus {
+  box-shadow: 0 2px 2.5px 0 rgb(233, 233, 233)!important;
+  border-color: rgb(233, 233, 233)!important;
+}
+
+select {
+  border-color: rgb(233, 233, 233)!important;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root{
+  --deep-violet: #202033;
+  --beige:  #f9e1e3;
+  --lilac: #b2a4ee;
+  --less-violet: #a472c7;
+  --miss-rose: #f09cbe;
+  --this-green: #6B8F71;
+  --light_pink: rgb(255, 252, 252);
+  --light_grey: rgb(233, 233, 233);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+  overflow-wrap: break-word;
+  color: var(--deep-violet);
+}
+
+.nunito-sans-Nunito {
+font-family: "Nunito Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-variation-settings:
+  "wdth" 100,
+  "YTLC" 500;
+}
+
+body {
+  padding: 3rem;
+  /* background: var(--deep-violet); */
+  background: linear-gradient(to bottom, var(--beige), white);
+  min-height: 100vh;
+  color: var(--beige);
+  border-width: 3px;
+  padding-top: 70px;
+}
+
+.body-logged-in {
+  background: var(--light_pink);
+  padding: 0px;
+}
+
+.login-section {
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  top:35%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.login-section button {
+  background-color: #f9e1e3;
+  color: var(--deep-violet);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 300px;
+}
+
+.login-section button:hover {
+  background-color: #d0b9bb;
+  box-shadow: 0 4px 6px --light_grey;
+}
+
+.login-section input {
+  width: 300px;
+}
+
+
+input:focus {
+  border-color: rgb(233, 233, 233);
+  outline: none;
+  box-shadow: 0 0 5px rgb(233, 233, 233);
+  font-size: 1em;
+}
+
+#user{
+  font-size: 1em;
+}
+
+#password{
+  font-size: 1em;
+}
+
+.fadeInUp-animation {
+  animation: 2.5s fadeInUp;
+}
+
+@keyframes fadeInUp {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateY(0%);
+      opacity: 1;
+  }
+}
+
+h2{
+  font-size: 50px;
+  font-style: italic;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+input:-webkit-autofill{
+  background-color: white;
+}
+
+button {
+  background-color: var(--beige); /* Soft Coral */
+  color: var(--deep-violet);
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #f4c4c8; /* Slightly darker coral */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  color: var(--deep-violet);
+}
+
+.sign-up {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--deep-violet);
+}
+
+nav {
+  background-color: var(--deep-violet);
+  box-shadow: 0 2px 3.5px 0 var(--deep-violet);
+}
+
+.nb-brand {
+  color:white;
+  font-size: larger;
+  margin-bottom: 15px;
+}
+
+.btn {
+  color:var(--beige);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar-container a {
+  color: white;
+}
+
+.card {
+  background: rgb(255, 252, 252);
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 87.5vh;
+  margin: 0px 100px;
+  border-color: rgb(255, 252, 252);
+  box-shadow: 0 2px 7.5px 0 var(--beige);
+}
+
+.card-body {
+  position: absolute;
+}
+
+.card-body input {
+  border: 1px solid rgb(233, 233, 233);
+}
+
+.card-body input:focus {
+  box-shadow: 0 2px 2.5px 0 rgb(233, 233, 233);
+}
+
+.material-icons, .material-icons-outlined {
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.material-icons:hover, .material-icons-outlined:hover {
+  background-color: #f9e1e3ba;
+  border-radius: 20px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 15px 0px;
+}
+
+.nav-item p {
+  color:rgb(255, 252, 252);
+  margin: 10px;
+  font-size: large;
+}
+
+.nav-item-out {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-item-out a:hover {
+  color: var(--beige);
+}
+
+.navbar-brand:hover {
+  color: var(--beige);
+}
+
+.sidebar {
+  height:100%;
+  width:200px;
+  background-color:var(--deep-violet);
+  position:fixed!important;
+  z-index:1;
+  overflow:auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.sidebar a, h5 {
+  color: white;
+}
+
+.logged-in-content {
+  margin-left: 15%;
+  padding-top: 70px;
+}
+
+.w3-dropdown-content > a {
+  background-color: #f9e1e3ba!important;
+  color: var(--deep-violet);
+  display: block;
+}
+
+.w3-dropdown-content > a:hover {
+  background-color: #f4c4c8!important;
+}
+
+.w3-dropdown-content {
+  margin-left: 7.5px!important;
+}
+/* 
+.form-field {
+  width: 300px;
+  margin: 20px 5px;
+  display: inline;
+  float: left;
+} */
+
+.patient-form {
+  width: 65vw;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 10px 10px; 
+  grid-template-areas: 
+    "first first first last last last"
+    "bday bday email email phone phone"
+    "address address address address address address"
+    "city city state state zip zip"
+    "condition condition condition condition diagnosis diagnosis"
+    "insurance insurance insurance insurance insurance insurance";
+  align-items: center;
+}
+
+.patient-form label {
+  color: var(--deep-violet);
+}
+
+#patient_first_name {
+  grid-area: first; 
+}
+
+#patient_last_name {
+  grid-area: last; 
+}
+
+#patient_birthday {
+  grid-area: bday; 
+}
+
+#patient_email {
+  grid-area: email; 
+}
+
+#patient_phone {
+  grid-area: phone; 
+}
+
+#patient_address {
+  grid-area: address; 
+}
+
+#patient_city {
+  grid-area: city; 
+}
+
+#patient_state {
+  grid-area: state; 
+}
+
+#patient_zipcode {
+  grid-area: zip; 
+}
+
+#patient_condition { 
+  grid-area: condition;
+}
+
+#patient_diagnosis { 
+  grid-area: diagnosis;
+}
+
+#patient_insurance { 
+  grid-area: insurance;
+}
+
+#add-patient-button {
+  width: 20%;
+  place-self: center;
+  background-color: var(--beige);
+  color: var(--deep-violet);
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px 10px 5px 10px;
+}
+
+#back-patient-button {
+  width: 20%;
+  place-self: center;
+  color: var(--deep-violet);
+  background-color: transparent!important;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shift-message {
+  margin-left: 15%!important;
+}
+
+.patient-item {
+  padding: 20px 30px;
+}
+.patient-item > div{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.patient-item > div > span {
+  padding: 0px;
+  margin: 0px;
+  font-size: xx-large;
+}
+
+.patient-record-container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 20px 20px; 
+  grid-template-areas: 
+    "name name name name name name date date date"
+    "contact contact contact contact appointments appointments appointments activity activity"
+    "contact contact contact contact appointments appointments appointments activity activity"
+    "contact contact contact contact personal personal personal insurance insurance"
+    "counselor counselor counselor counselor personal personal personal insurance insurance"
+    "counselor counselor counselor counselor personal personal personal insurance insurance"; 
+}
+
+.main-cards {
+  background-color: white; 
+  border-radius: 20px; 
+  border: 1px solid rgb(233, 233, 233);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.main-cards > div {
+  border-bottom: 1px solid rgb(233, 233, 233);
+  color: #202033;
+  padding: 20px 10px;
+  margin: 0px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-cards > div p {
+  margin: 0px;
+  padding: 0px;
+  width: 60%;
+  font-size: small;
+}
+
+.main-cards > div > p:nth-child(1) {
+  color: #3a3a5d93;
+}
+
+.main-cards > div:last-child {
+  border: 0px solid violet;
+}
+
+.contact { grid-area: contact;}
+.appointments { grid-area: appointments;}
+.personal { grid-area: personal;}
+.activity { grid-area: activity;}
+.insurance { grid-area: insurance;}
+.counselor { grid-area: counselor;}
+.name-card { grid-area: name; display: flex; align-items: center;}
+.date-card { grid-area: date; display: flex; color: #202033; flex-direction: column; justify-content: center;}
+
+#record-back-button {
+  width: 20%;
+  place-self: center;
+  background-color: var(--beige);
+  color: var(--deep-violet);
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px 10px 5px 10px;
+}
+
+#record-delete-button {
+  width: 20%;
+  place-self: center;
+  color: white;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px 10px 5px 10px;
+}
+
+.name-card > div > span {
+  font-size: 100px;
+  margin-bottom: 0px;
+  color: #202033;
+  margin-right: 5px;
+}
+
+.name-card > div > span:hover {
+  background-color: transparent;
+}
+
+.nav-icon {
+  margin-top: 30px;
+}
+
+.file-submit-button {
+  padding: 10px 20px;
+  margin: 10px 20px;
+  border-radius: 15px;
+  background-color: #f9e1e3;
+  color: #202033;
+}

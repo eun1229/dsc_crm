@@ -1,0 +1,33 @@
+{% extends "crm_app/base.html" %}
+{% block content %}
+<body>
+	<div class="logged-in-content">
+		<h1>Current Patients</h1>
+    <br>
+    <div class="list-group">
+      <a class="list-group-item">
+        Patient Info
+      </a>
+		{% if patient_records %}
+			{% for record in patient_records %}
+        <a href="{% url 'patient_record' record.id %}" class="list-group-item list-group-item-action patient-item">
+          <div>
+            <span class="material-icons-outlined">
+              account_circle
+            </span>
+            <div style="display: flex; flex-direction:column; margin: 0px 10px;">
+              <div>{{ record.first_name }} {{ record.last_name }}</div>
+              <div><p style="padding: 0px; margin: 0px; font-size:x-small;">{{ record.city }}, {{ record.state }}</p></div>
+            </div>
+            <div style="display: flex; flex-direction:column; margin: 0px 10px; font-size:smaller; margin-left: auto; min-width: 15%;">
+              <div>{{ record.email }}</div>
+              <div>{{ record.phone }}</div>
+            </div>
+          </div>
+        </a>
+			{% endfor %}
+    </div>
+	</div>
+</body>
+{% endif %}
+{% endblock %}

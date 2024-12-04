@@ -1,0 +1,53 @@
+{% extends 'crm_app/base.html' %}
+{% block content %}
+<div class="logged-in-content">
+  <div class="patient-record-container">
+    <div class="contact main-cards">
+      <div><strong>Contact Info</strong></div>
+      <div><p>Full Name</p><p style="font-weight: 500;">{{ patient_record.first_name }} 
+        {{ patient_record.last_name }}</p></div>
+        <div><p>Phone Number</p><p style="font-weight: 500;">{{ patient_record.phone }}</p></div>
+        <div><p>Email</p><p style="font-weight: 500;">{{ patient_record.email }}</p></div>
+        <div><p>Address</p><p style="font-weight: 500;">{{ patient_record.address }}, {{ patient_record.city }} {{ patient_record.state }}</p></div>
+    </div>
+    <div class="appointments main-cards">
+      <div><strong>Personal</strong></div>
+      <div><p>Date of Birth</p><p style="font-weight: 500;">{{ patient_record.birthday }}</p></div>
+      <div><p>Disorder</p><p style="font-weight: 500;">{{ patient_record.condition }}</p></div>
+    </div>
+    <div class="personal main-cards">
+      <div><strong>Appointments</strong></div>
+    </div>
+    <div class="activity main-cards">   
+      <div><strong>Activity</strong></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="insurance main-cards">
+      <div><strong>Insurance Information</strong></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="counselor main-cards">
+      <div><strong>Assigned Counselor</strong></div>
+      <div><p>Counselor</p><p style="font-weight: 500;"></p></div>
+      <div><p>Prescriptions</p><p style="font-weight: 500;"></p></div>
+      <div><p>Diagnosis</p><p style="font-weight: 500;"></p></div>
+    </div>
+    <div class="name-card"><div><span class="material-icons-outlined">
+      account_circle
+    </span></div><div><strong style="font-size: 40px; color: #202033">
+      {{ patient_record.first_name }} 
+    {{ patient_record.last_name }}<p style="font-size: small; margin-bottom: 0px;">Patient</p></strong></div></div>
+    <div class="date-card"><div><strong>Joined:</strong> {{patient_record.created_at|date:'M d, Y P'}}</div><div><strong>Last updated: </strong>{{patient_record.updated_at|date:'M d, Y P' }}</div></div>
+  </div>
+  <br/><br/>
+  <a href="{% url 'view_patients' %}" class="btn btn-secondary" id = "record-back-button">Back</a>
+  <a href="{% url 'delete_patient' patient_record.id %}" class="btn btn-danger" id = "record-delete-button">Delete</a>  
+</div>
+
+
+{% endblock %}
